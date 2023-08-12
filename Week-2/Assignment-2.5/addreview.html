@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Review</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="addreview.html">Add Review</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="add-review">
+        <h1>Add Review</h1>
+        <form action="#" method="post">
+            <label for="restaurant">Select Restaurant:</label>
+            <select name="restaurant" id="restaurant">
+                <option value="mainstreetcafe">Main Street Cafe</option>
+                <option value="greekhouse">Greek House</option>
+            </select>
+            <br><br>
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br><br>
+            <div style="display:flex; align-items:center">
+                <label for="review">Your Review:</label>
+                <textarea name="review" id="review" rows="4" required></textarea>
+            </div>
+            
+            <br>
+            <input type="submit" value="Submit Review">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Restaurant Reviews</p>
+    </footer>
+</body>
+
+</html>

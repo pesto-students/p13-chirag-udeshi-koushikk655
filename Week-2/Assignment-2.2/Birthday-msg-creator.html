@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Message Form</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+        }
+    </style>
+    <!-- Add any necessary CSS or other meta tags here -->
+</head>
+
+<body>
+    <h2>Happy Birthday Message Creator</h2>
+    <form action="URL" method="POST">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*">
+        </div>
+
+        <div class="form-group">
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday" id="birthday" required>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Message Color:</label>
+            <input type="color" name="color" id="color">
+        </div>
+
+        <div class="form-group">
+            <label for="blinkCount">Number of Blinks:</label>
+            <input type="number" name="blinkCount" id="blinkCount" value="0" min="0" max="10">
+        </div>
+
+        <div class="form-group">
+            <label for="musicVolume">Music Volume:</label>
+            <input type="range" name="musicVolume" id="musicVolume" value="20" min="0" max="50">
+        </div>
+
+        <div>
+            <button type="submit">Send Birthday Message</button>
+        </div>
+    </form>
+</body>
+
+</html>
