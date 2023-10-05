@@ -7,10 +7,15 @@
     <style>
         .form-group {
             margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
         }
+        /* .form-wrapper{
+            width: 350px;
+        } */
 
         label {
-            display: block;
+            display: inline-block;
         }
 
         textarea {
@@ -21,29 +26,29 @@
 </head>
 
 <body>
-    <form action="URL" method="POST" enctype="multipart/form-data">
+    <form action="URL" method="POST" enctype="multipart/form-data" class="form-wrapper">
         <div class="form-group">
             <label for="fullName">Full Name:</label>
-            <input type="text" name="fullName" id="fullName" required>
+            <input style="margin-left: 45px;" type="text" name="fullName" id="fullName" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email Address:</label>
-            <input type="email" name="email" id="email" required>
+            <input style="margin-left: 20px;" type="email" name="email" id="email" required>
         </div>
 
         <div class="form-group">
             <label for="about">About You:</label>
-            <textarea name="about" id="about" rows="3" cols="50"></textarea>
+            <textarea style="margin-left: 45px;" name="about" id="about" rows="3" cols="50"></textarea>
         </div>
 
         <div class="form-group">
             <label for="picture">Photo:</label>
-            <input type="file" name="picture" id="picture">
+            <input style="margin-left: 76px;" type="file" name="picture" id="picture">
         </div>
 
         <div>
-            <input type="submit" value="Join Now">
+            <input type="submit" value="Submit">
         </div>
     </form>
 </body>

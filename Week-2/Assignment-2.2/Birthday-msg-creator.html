@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <title>Birthday Message Form</title>
     <style>
+        form{
+            width: 350px;
+        }
         .form-group {
             margin-bottom: 10px;
+            display: flex;
+            /* gap: 40px; */
+            justify-content: space-between;
         }
 
         label {
@@ -20,12 +26,16 @@
     <h2>Happy Birthday Message Creator</h2>
     <form action="URL" method="POST">
         <div class="form-group">
-            <label for="email">Email:</label>
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" required placeholder="Happy birthday!" >
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
             <input type="email" name="email" id="email" required pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*">
         </div>
 
         <div class="form-group">
-            <label for="birthday">Birthday:</label>
+            <label for="birthday">Date to send:</label>
             <input type="date" name="birthday" id="birthday" required>
         </div>
 
