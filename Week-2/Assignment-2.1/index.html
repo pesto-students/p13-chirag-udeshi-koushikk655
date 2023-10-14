@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Join a social network</title>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        /* .form-wrapper{
+            width: 350px;
+        } */
+
+        label {
+            display: inline-block;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+    <!-- Add any necessary CSS or other meta tags here -->
+</head>
+
+<body>
+    <form action="URL" method="POST" enctype="multipart/form-data" class="form-wrapper">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input style="margin-left: 45px;" type="text" name="fullName" id="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input style="margin-left: 20px;" type="email" name="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="about">About You:</label>
+            <textarea style="margin-left: 45px;" name="about" id="about" rows="3" cols="50"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="picture">Photo:</label>
+            <input style="margin-left: 76px;" type="file" name="picture" id="picture">
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>
