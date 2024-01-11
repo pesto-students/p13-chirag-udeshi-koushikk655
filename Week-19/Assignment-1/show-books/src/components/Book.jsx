@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { PureComponent } from 'react';
 
-function Book(props) {
-    let item = props.item
-  return (
-    <li style={{listStyle:'none',marginBottom:'10px'}}>Title : {item.title} -- Author : {item.author} -- Year : {item.year}</li>
-  )
+class Book extends PureComponent {
+  render() {
+    const { title, author, year } = this.props.item;
+
+    return (
+      <li style={{ listStyle: 'none', marginBottom: '10px' }}>
+        Title: {title} -- Author: {author} -- Year: {year}
+      </li>
+    );
+  }
 }
 
-export default Book
+export default Book;
+
