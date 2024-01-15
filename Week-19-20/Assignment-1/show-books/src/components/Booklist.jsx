@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import Book from './Book';
+import React, { useState, useContext, useEffect } from 'react';
 import BookForm from './Bookform';
 import BookDetail from './BookDetail';
+import { ThemeContext } from '../App';
+import BookDataLoader from './BookDataLoader';
 
 const Booklist = () => {
-    const style = {
-
-    }
-  const [books, setBooks] = useState([
-    { title: 'Book 1', author: 'Author 1', year: 2020 },
-    { title: 'Book 2', author: 'Author 2', year: 2018 },
-    { title: 'Book 3', author: 'Author 3', year: 2022 },
-    // Add more books if you'd like
-  ]);
+  const theme = useContext(ThemeContext);
+  const [books, setBooks] = useState([]);
+  useEffect(() => {
+    BookDataLoader()
+      .then((data) => setBooks(data))
+      .catch((error) => console.error('Error fetching book data:', error));
+  }, []);
 
   const addBook = (newBook) => {
     setBooks([...books, newBook]);
@@ -34,7 +33,7 @@ const Booklist = () => {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {books.map((item, index) => (
             <div key={index} style={{margin:'20px'}}>
-                <BookDetail book={item} />
+                <BookDetail book={item} theme={theme} />
                 <button type='submit' onClick={() => deleteBook(index)} style={{background:'red', color:'white',  borderRadius:'4px',marginBottom:'10px',padding:'3px'}}>Delete</button>
             </div>
           ))}

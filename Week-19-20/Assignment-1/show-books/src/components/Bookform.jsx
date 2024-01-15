@@ -16,7 +16,7 @@ const BookForm = ({ addBook }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+    <form onSubmit={handleSubmit} style={{ marginBottom: '20px', textAlign:'center' }}>
       <label style={{ marginRight: '10px' }}>
         Title:
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
